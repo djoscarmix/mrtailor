@@ -26,7 +26,7 @@ if ( post_password_required() )
                 <?php if ( have_comments() ) : ?>
                     <h2 class="comments-title">
                         <?php
-                            printf( _nx( 'One reply on &ldquo;%2$s&rdquo;', '%1$s replies on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'mr_tailor' ),
+                            printf( _nx( 'Un comentario en &ldquo;%2$s&rdquo;', '%1$s comentarios en &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'mr_tailor' ),
                                 number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' );
                         ?>
                     </h2>
@@ -35,7 +35,7 @@ if ( post_password_required() )
                     <nav id="comment-nav-above" class="comment-navigation" role="navigation">
                         <h1 class="screen-reader-text"><?php _e( 'Comment navigation', 'mr_tailor' ); ?></h1>
                         <div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'mr_tailor' ) ); ?></div>
-                        <div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'mr_tailor' ) ); ?></div>
+                        <div class="nav-next"><?php next_comments_link( __( 'Comentarios mas recientes &rarr;', 'mr_tailor' ) ); ?></div>
                     </nav><!-- #comment-nav-above -->
                     <?php endif; // check for comment navigation ?>
             
@@ -55,7 +55,7 @@ if ( post_password_required() )
                     <nav id="comment-nav-below" class="comment-navigation" role="navigation">
                         <h1 class="screen-reader-text"><?php _e( 'Comment navigation', 'mr_tailor' ); ?></h1>
                         <div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'mr_tailor' ) ); ?></div>
-                        <div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'mr_tailor' ) ); ?></div>
+                        <div class="nav-next"><?php next_comments_link( __( 'Comentarios mas recientes &rarr;', 'mr_tailor' ) ); ?></div>
                     </nav><!-- #comment-nav-below -->
                     <?php endif; // check for comment navigation ?>
             
@@ -65,7 +65,7 @@ if ( post_password_required() )
                     // If comments are closed and there are comments, let's leave a little note, shall we?
                     if ( ! comments_open() && '0' != get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
                 ?>
-                    <p class="no-comments"><?php _e( 'Comments are closed.', 'mr_tailor' ); ?></p>
+                    <p class="no-comments"><?php _e( 'Los comentarios estan cerrados.', 'mr_tailor' ); ?></p>
                 <?php endif; ?>
                 
                 
@@ -86,7 +86,7 @@ if ( post_password_required() )
                 
                 $getbowtied_comment_args = array(		
                 
-                    'title_reply' => __( 'Leave a Reply', 'mr_tailor' ),
+                    'title_reply' => __( 'Deja tu comentario', 'mr_tailor' ),
                 
                     'fields' => apply_filters( 'comment_form_default_fields', array(
                     
@@ -100,7 +100,7 @@ if ( post_password_required() )
                     )),
                     
                     'comment_field' =>	'<div class="row"><div class="large-12 columns"><p>' .	
-                                        '<label for="comment">' . __( 'Message', 'mr_tailor' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label>' .
+                                        '<label for="comment">' . __( 'Mensaje', 'mr_tailor' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label>' .
                                         '<textarea id="comment" name="comment" cols="45" rows="8" ' . $aria_req . '></textarea>' .	
                                         '</p></div></div>',
                 
